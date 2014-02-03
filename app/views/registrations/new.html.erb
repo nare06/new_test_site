@@ -1,0 +1,47 @@
+    <title></title>
+
+    <!-- Start: MAIN CONTENT -->
+    <div class="content">
+      <div class="container">
+        <div class="page-header">
+          <h1>Get ready to Rock!</h1>
+        </div>
+        <div class="row">
+          <div class="span6 offset3">
+            <h4 class="widget-header"><i class="icon-gift"></i> Be a part of CampusBuzz</h4>
+            <div class="widget-body">
+              <div class="center-align">
+              <%= form_for @user,:html => {:class =>"form-horizontal form-signin-signup"} do |f| %>
+               <%= render 'shared/error_messages', :object => f.object %>
+      <%= f.text_field :name, :placeholder => 'Name' %>
+      <%= f.text_field :email, :placeholder =>'Email' %>
+      <!% if @user.password_required? %>
+      <%= f.password_field :password, :placeholder =>'Password'%>
+      <%= f.password_field :password_confirmation, :placeholder =>'Confirmation' %>
+      <!%end%>
+      <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
+    <% end %>               
+                <h4><i class="icon-question-sign"></i> Already have an account?</h4>
+                 <%= link_to "Signin",new_user_session_path, :class =>'btn btn-large bottom-space' %><br>
+                
+                   
+                <h4><i class="icon-thumbs-up"></i> Sign in with third party account</h4>
+                <ul class="signin-with-list">
+                
+                  <li>
+                      <%= link_to 'Facebook Login', user_omniauth_authorize_path(:facebook), :class =>'btn-facebook',target: '_blank' %>
+             
+                    
+                  </li>
+                  <li>
+                   
+                       <%= link_to 'Google Login', user_omniauth_authorize_path(:google_oauth2), :class =>'btn-google', target: '_blank' %>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End: MAIN CONTENT -->

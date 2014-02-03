@@ -1,0 +1,28 @@
+    <title></title>
+    <div class="content">
+      <div class="container">
+        <div class="page-header">
+          <h1>Signin to CampusKonnect</h1>
+        </div>
+        <div class="row">
+          <div class="span6 offset3">
+            <h4 class="widget-header"><i class="icon-lock"></i> Signin to Bootbusiness</h4>
+            <div class="widget-body">
+              <div class="center-align">
+     <%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class =>"form-horizontal form-signin-signup"}) do |f| %>
+       <%= f.text_field :email, :placeholder => 'Email' %>
+       <%= f.password_field :password, :placeholder => 'Password' %>
+  <% if devise_mapping.rememberable? -%>
+  <%= f.label :remember_me, 'Stay signed in' %>
+   <%= f.check_box :remember_me, :class => 'center' %><br>
+  <% end -%>
+      <%= f.submit "Sign in", class: "btn btn-medium btn-primary" %>
+      <% end %>
+      <%= render "devise/shared/links" %>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

@@ -1,0 +1,31 @@
+    <title></title>
+    <!-- Start: MAIN CONTENT -->
+    <div class="content">
+      <div class="container">
+        <div class="page-header">
+          <h1>Edit your profile!</h1>
+        </div>
+        <div class="row">
+          <div class="span6 offset3">
+            <h4 class="widget-header"><i class="icon-gift"></i> Edit your profile</h4>
+            <div class="widget-body">
+              <div class="center-align">
+              <%= form_for @user,:html => {:class =>"form-horizontal form-signin-signup"} do |f| %>
+               <%= render 'shared/error_messages', :object => f.object %>
+      <%= f.text_field :name, :placeholder => 'Name' %>
+      <%= f.text_field :email, :placeholder =>'Email' %>
+      <%= f.password_field :password, :placeholder =>'Password'%>
+      <%= f.password_field :password_confirmation, :placeholder =>'Confirmation' %><br>
+      
+      <%= f.submit "Update", class: "btn btn-large btn-primary" %>
+    <% end %>               
+    <%= gravatar_for @user %><br>
+<a href="http://gravatar.com/emails">change</a>
+     </div>
+</div>
+               
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End: MAIN CONTENT -->

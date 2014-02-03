@@ -1,0 +1,112 @@
+/*
+Uploadify
+Copyright (c) 2012 Reactive Apps, Ronnie Garcia
+Released under the MIT License <http://www.opensource.org/licenses/mit-license.php> 
+*/
+
+.uploadify {
+	position: relative;
+	margin-bottom: 1em;
+}
+.uploadify-button {	
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+	cursor:pointer;
+	font-size:14px;
+	font-weight:600;    
+	padding: 1px 5px;
+    text-align: center;
+	background-color:#6499e5;
+	border:1px solid #4679c1;
+	color:#ffffff !important;
+}
+.uploadify:hover .uploadify-button {
+	background-color:#5e90d6;
+	border:1px solid #4c75ad;
+	text-decoration:none;
+}
+.uploadify-button.disabled {
+	background-color: #D0D0D0;
+	color: #808080;
+}
+.uploadify-queue {
+	margin-bottom: 1em;
+}
+.uploadify-queue-item {
+	background-color: #F5F5F5;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	font: 11px Verdana, Geneva, sans-serif;
+	margin-top: 5px;
+	max-width: 350px;
+	padding: 10px;
+}
+.uploadify-error {
+	background-color: #FDE5DD !important;
+}
+.uploadify-queue-item .cancel a {
+	background: url('../img/uploadify-cancel.png') 0 0 no-repeat;
+	float: right;
+	height:	16px;
+	text-indent: -9999px;
+	width: 16px;
+}
+.uploadify-queue-item.completed {
+	background-color: #E5E5E5;
+}
+.uploadify-progress {
+	background-color: #E5E5E5;
+	margin-top: 10px;
+	width: 100%;
+}
+.uploadify-progress-bar {
+	background-color: #0099FF;
+	height: 3px;
+	width: 1px;
+}
+
+
+/*-------Uploadify image---------*/
+
+.upload_btn {
+	background-color: none!important;
+	background-image: none!important;
+	background: none!important;
+	border: none;
+	border-radius:0;
+	text-align: center;
+	text-shadow: 0;
+	width: 200px;
+	font-weight:normal;
+	color:#873512;
+	font-size:11px;
+	font-family: "Lucida Grande", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	padding:0;
+	height:35px;
+}
+.upload_btn:hover {
+	background-color: none;
+	background-image: none;
+	color:#000000;
+}
+#file_upload-queue {
+	display:none;
+}
+.loader {
+ background:url(../images/loader.gif) center center no-repeat;
+	position:absolute;
+	top:0;
+	left:0;
+	width:72px;
+	height:72px;
+}
+.loader1 {
+	background:url(../images/loader.gif) center center no-repeat;
+	position:absolute;
+	top:0;
+	left:0;
+	width:128px;
+	height:128px;
+}

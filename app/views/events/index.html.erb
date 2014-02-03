@@ -1,0 +1,61 @@
+<title></title> 
+    <div class="content">
+      <div class="container">
+        <div class="page-header">
+          <h1>Campus Events</h1>
+        </div>
+        <% @events.each do |event| %>
+        <div class="row bottom-space">
+          <div class="span1 offset1">
+            <div class="circle">
+              <span class="event-date"><%=event.sdatetime.to_datetime.strftime("%d-%m-%Y") %><br>
+              <%=event.sdatetime.to_datetime.day %></span>
+            </div>
+          </div>
+          <div class="span9">
+            <h4>
+            <!%= link_to 'calendar_sync', gsync_path(event) %>
+            <%= link_to 'Show', event %>
+            <%= link_to 'Edit', edit_event_path(event) %>
+            <%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </h4>
+            <p><%=event.events_description %>
+            </p>
+          </div>
+        </div>
+         <% end %>
+        
+<%= will_paginate @events, class:"pagination pagination-centered" %>
+        <div class="pagination pagination-centered">
+          <ul>
+            <li class="disabled">
+              <a href="#">&laquo;</a>
+            </li>
+            <li class="active">
+              <a href="#">1</a>
+            </li>
+            <li>
+              <a href="#">2</a>
+            </li>
+            <li>
+              <a href="#">3</a>
+            </li>
+            <li>
+              <a href="#">4</a>
+            </li>
+            <li>
+              <a href="#">5</a>
+            </li>
+            <li>
+              <a href="#">6</a>
+            </li>
+            <li>
+              <a href="#">&raquo;</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    <div>
+    <%= link_to 'New Event', new_event_path %>
+    <!-- End: MAIN CONTENT -->
+    <!-- Start: FOOTER -->

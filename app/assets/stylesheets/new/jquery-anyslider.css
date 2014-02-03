@@ -1,0 +1,94 @@
+/* Bare minimum styles */
+.slider {
+	overflow: auto; /* Not required but recommended for accessibility when JavaScript is turned off */
+	position: relative;
+}
+/* AnySlider can be styled to your liking. This is just example styles */
+.slider {
+	/*border: 1px dotted #333;
+	height: 250px;
+	margin: 40px auto;
+	padding: 5px;
+	text-align: center;*/
+	width: auto;
+}
+/* The arrows can of course also be styled to your liking. This is just example styles */
+.as-prev-arrow, .as-next-arrow {
+	background: url(img/arrows.png) no-repeat;
+	cursor: pointer;
+	filter: alpha(opacity=0);
+	height: 100px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	text-indent: 100%;
+	top: 0;
+	white-space: nowrap;
+	width: 22px;
+	z-index: 6;
+}
+.as-prev-arrow {
+	left: 0;
+}
+.as-next-arrow {
+	background-position: -22px 0;
+	right: 0;
+}
+.slider:hover .as-arrows a {
+	filter: alpha(opacity=1);
+	opacity: 1;
+}
+.tasFixedArrow{
+	filter: alpha(opacity=1);
+	opacity: 1;
+}
+/* The same rules for styling apply here. Style to your liking */
+.as-nav {
+	top: -33px;
+	right: 2%;
+	position: absolute;
+	text-align: left;
+	/*width: 54px;*/
+	z-index: 5;
+}
+.as-nav a {
+	background: url(img/bullets.png) no-repeat;
+	height: 16px;
+	display: inline-block;
+	margin: 0 1px;
+	overflow: hidden;
+	text-indent: -9999px;
+	width: 16px;
+}
+a.as-active, .as-nav a:hover {
+	background-position: 0 -16px;
+}
+/* Other styles not related to AnySlider */
+
+
+#content_slider {
+	margin: 0 auto;
+	position: relative;
+	width: 100%;
+}
+.slider-wrapper {
+	height: auto;
+	position: relative;
+}
+.featured .slider-wrapper {
+	/*height: 150px;*/
+	padding-bottom:10px;
+}
+.featured .slider-wrapper .slider {
+	margin:10px 10px 0;
+}
+
+
+.wallfame .slider-wrapper {
+	height: 100px;
+	padding:15px 0;
+}
+.wallfame .slider-wrapper .slider {	
+	height: 100px;
+}
+.wallfame .slider-wrapper .as-nav  {display:none !important;}

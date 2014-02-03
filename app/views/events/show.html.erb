@@ -1,0 +1,100 @@
+<title></title>
+<div class="content">
+      <div class="container">
+      	<%= stylesheet_link_tag "new/newsheet" %>
+	<!--Code For global Js Start Here--> 	
+	<%= stylesheet_link_tag "new/admin" %>
+<div class="ft_result">
+        <div class="row-fluid">
+          <h1 class="page-title">Event Page Preview
+          </h1>
+                    <ul class="breadcrumb">
+            <li> <i class="icon-home"></i> <a href="#">Home</a> <span class="divider">/</span> </li>
+            <li><a href="#">Competitions</a> <span class="divider">/</span></li>
+            <li>Competition's Preview ( Submit for moderation)</li>
+            <li class="fright"><a href="#"><button class="btn btn-info"><i class="icon-plus icon-white"></i> Add New Competition</button></a></li>
+          </ul>
+        </div>
+        <div style="font-weight:600;color:#248E00;font-size:14px; margin:0 30px;" id="msg" align="center"></div>
+        <div class="row-fluid">
+          <div class="span12">
+            <div class="widget">
+              <div class="widget-body">
+                <div id="adminCompetition">
+                  <ul class="processBar">
+                    <li class="complete">Add Details</li><li class="complete">Preview</li>
+                                        <li class="process">Submit for Moderation</li>
+                    <li class="last">Pending for Moderation</li>
+                                     </ul>
+                  <hr>
+                  <div class="wdcnt" style="width:80%;margin:20px auto;"> 
+                   
+                    <div class="eventDetail">
+                      <div class="eventTitle">
+                        <h2><%= @event.title %></h2>
+                        <h4><%= @event.organizer %></h4>
+                      </div>
+                                            <div class="eventTab">
+                        <ul>
+                                                    <li><a href="javascript:void(0);" class="search-domcat">Entrepreneurship</a></li>
+                                                                              <li><a href="javascript:void(0);" class="search-domcat">Article Writing</a></li>
+                                                    <li><a href="javascript:void(0);" class="search-domcat">Panel Discussion</a></li>
+                                                    <li><a href="javascript:void(0);" class="search-domcat">Paper Presentation</a></li>
+                                                    <li><a href="javascript:void(0);" class="search-domcat">Poster Making</a></li>
+                                                  </ul>
+                      </div>
+                      <div class="summary">
+                        <div class="logoB">
+                                                    <div style="height:150px;display:table-cell;vertical-align:middle;"><img src="#"></div>
+                        </div>
+                        <div class="des">
+                          <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tbody><tr>
+                              <td width="22%"><strong>Date:</strong></td>
+                              <td width="78%"><%=@event.sdatetime.to_datetime.strftime("%d-%m-%Y") %></td>
+                            </tr>
+                                                                                              <tr>
+                                        <td><strong>Location:</strong></td>
+                                        <td>delhi</td>
+                                    </tr>
+                                        
+                                                        <tr>
+                              <td><strong>Eligibility:</strong></td>
+                              <td>Corporate</td>
+                            </tr>
+                                                                                         <tr>
+                                    <td><strong>Region:</strong></td>
+                                    <td>India</td>
+                                </tr>
+                                                                                                                  </tbody></table>
+                        </div>
+						<!--For Registration URL And Deadline--->
+					  <div style="margin-bottom:auto;"></div>                    	  
+                    
+                      <div class="text details"><%=@event.events_description %> </div>
+                      <div class="tab_dead">
+                        <ul class="tab">
+                   <li><a class="active" href="javascript:void(0);" id="tas_contact_detail">Contact Organizer</a><br></li>
+    </ul>        
+             <div id="fill_by_ajax"><table id="rounded-corner" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><th scope="col" width="40%" align="left">Name</th><th scope="col" width="35%" align="left">Email Id</th><th scope="col" width="25%" align="left">Contact No.</th></tr><tr><td><div><p><%=@event.contact_name%></p></div></td><td><div><p><%=@event.email %></p></div></td><td><%=@event.contact_phone %></td></tr></tbody></table></div>
+                            
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="center">
+                                      <input id="submit_preview" name="submit_preview" class="btn-blue scroll" value="Submit for Moderation" type="button">
+                                      
+                 <%= link_to "Edit Event",edit_event_path, :action=>'edit',:type => 'button',:class => 'btn-grey edit'%>    
+                                       
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

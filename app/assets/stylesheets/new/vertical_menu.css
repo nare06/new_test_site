@@ -1,0 +1,51 @@
+
+ul li.admin_head {background:url(../images/admin_hr_bg.jpg) 0 0 repeat-x;color:#5079b2;text-transform:uppercase;font-weight:700;padding: 10px 10px 0;height:32px;}
+ul.blue-notification-navigation { width: 216px; padding: 0; font-size: 12px;}
+ul.blue-notification-navigation * { list-style: none; }
+ul.blue-notification-navigation > li > div.header { padding: 5px 12px; border-bottom: 1px #396e9f solid;}
+ul.blue-notification-navigation > li:last-child > div.header { border-bottom: none; }
+ul.blue-notification-navigation > li ul { padding: 0; margin: 0; }
+ul.blue-notification-navigation > li ul.menu { background-color:#fff;border-bottom:2px solid #5079b2;}
+ul.blue-notification-navigation > li ul li { background: url(../images/mini_arrow.png) 20px center no-repeat #fff; padding: 6px 12px; color: #333; }
+ul.blue-notification-navigation > li ul li a { color: #333; }
+ul.blue-notification-navigation > li ul li.iconize { padding-left: 42px; }
+ul.blue-notification-navigation > li ul li:first-child { border-top: none;}
+ul.blue-notification-navigation > li ul li:last-child { border-bottom: none; }
+ul.blue-notification-navigation div.header
+{
+	position: relative;
+	text-align: center;
+	color: #444;
+	font-weight: 600;
+	background-color:#f5f5f5;
+	/*background: #648fd8;
+	background: -moz-linear-gradient(top, #648fd8 0%, #4f7dca 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#648fd8), color-stop(100%,#4f7dca));
+	background: -webkit-linear-gradient(top, #648fd8 0%,#4f7dca 100%);
+	background: -o-linear-gradient(top, #648fd8 0%,#4f7dca 100%);
+	background: -ms-linear-gradient(top, #648fd8 0%,#4f7dca 100%);
+	background: linear-gradient(to bottom, #648fd8 0%,#4f7dca 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#648fd8', endColorstr='#4f7dca',GradientType=0 );*/
+}
+ul.blue-notification-navigation > li > div.header > .label {display: table; width: auto; padding: 5px 24px; background: no-repeat left center; }
+ul.blue-notification-navigation > li > div.header > .notifications { background: #4572bc; font-size: 11px; position: absolute; top: 13px; right: 12px; display: block; padding: 5px 0; width: 24px; float: right; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; -moz-box-shadow: 0 1px 3px -2px #fff, inset 0 9px 8px -11px #000; -webkit-box-shadow: 0 1px 3px -2px #fff, inset 0 9px 8px -11px #000; box-shadow: 0 1px 3px -2px #fff, inset 0 9px 8px -11px #000; }
+
+/* Mouse Events */
+ul.blue-notification-navigation div.header:hover,
+ul.blue-notification-navigation div.header.act
+{
+	background-color: #5079b2;
+	color:#fff;
+	cursor: pointer;
+}
+ul.blue-notification-navigation > li ul li:hover,
+ul.blue-notification-navigation >  li ul li.act
+{	
+	background: url(../images/mini_arrow_h.png) 20px center no-repeat #fff;
+	color: #5079b2;
+	cursor: pointer;
+}
+ul.blue-notification-navigation > li ul li a:hover,
+ul.blue-notification-navigation >  li ul li.act a { color: #5079b2; }
+ul.blue-notification-navigation > li > div.header > .compe { background: url(../images/notification.png) 0 center no-repeat;}
+ul.blue-notification-navigation > li > div.header > .compe:hover, ul.blue-notification-navigation > li > div.header.act > .compe { background-image: url(../images/notification_h.png);}

@@ -1,0 +1,70 @@
+ <title></title>
+ <header>
+      <!-- Start: Navigation wrapper -->
+      <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+          <div class="container">
+            <%= link_to "CampusBuzzKonnect", root_path, class:"brand brand-bootbus" %>
+            <!-- Below button used for responsive navigation -->
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <!-- Start: Primary navigation -->
+            <div class="nav-collapse collapse">        
+              <ul class="nav pull-right">
+                          <li class="dropdown">
+                  <a href="#" class="dropdown-toggle active-link" data-toggle="dropdown">About<b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+            <%= link_to "Our works", '#'%>     
+            <%= link_to "Partnerships", '#'%>
+            <%= link_to "Team", '#'%>
+            <%= link_to "News", '#'%>  
+            <%= link_to "Blog", '#'%>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Events<b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                  <li class="nav-header">PRODUCTS</li>
+            <%= link_to "Add Events",addevent_path %>     
+            <%= link_to "My Events", '#'%>
+            <%= link_to "All Events", events_path%>
+                    <li class="divider"></li>
+            <li class="nav-header">SERVICES</li>        
+            <%= link_to "Service1", '#'%>     
+            <%= link_to "Service2", '#'%>
+            <%= link_to "Service3", '#'%>    
+            <%= link_to "All services", all_services_path%>
+                                                        
+                  </ul>                  
+                </li>        
+                <li><%= link_to "FAQ", faq_path %></li>
+                <li><%= link_to "Contact us", contact_path %></li> 
+            <% if user_signed_in? %>
+              <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Feeds<b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+            <li><%= link_to "My Feeds", '#' %></li>
+            <li><%= link_to "Following Feeds", '#' %></li>
+            </ul>             
+             	  <li class="dropdown">
+             	  <a href="#" class="dropdown-toggle active-link" data-toggle="dropdown">Account<b class="caret"></b></a>
+                  <ul class="dropdown-menu">                  
+         <%= link_to "All Users",users_path %>
+         <%= link_to "Profile", current_user %>
+         <%= link_to "User Settings", edit_user_path(current_user) %>   
+         <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>     
+         </ul>             
+         <% else %>      
+                <li><%= link_to "Sign in", new_user_session_path %></li> 
+                <li><%= link_to "Sign Up", new_user_registration_path %></li>
+          <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End: Navigation wrapper -->   
+    </header>
+    <!-- End: HEADER -->
